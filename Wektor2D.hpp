@@ -8,37 +8,31 @@ class Wektor2D
  public: 
     Wektor2D() 
     {
-        x=0.0;
-        y=0.0;
+        xCoord=0.0;
+        yCoord=0.0;
     }
-    Wektor2D(double a, double b)
+    Wektor2D(double xx, double yy)
     {
-        x=a;
-        y=b;
+        xCoord=xx;
+        yCoord=yy;
     }
-    void setX(double a) {x=a;};
-    void setY(double b) {y=b;};
-    double getX() {return x;};
-    double getY() {return y;};
+    void setX(double aa) {xCoord=aa;};
+    double getX() {return xCoord;};
+    void setY(double aa) {yCoord=aa;};
+    double getY() {return yCoord;};
     double x;
     double y;
- friend Wektor2D operator+(Wektor2D a, Wektor2D b)
+ friend Wektor2D operator+(Wektor2D v1, Wektor2D v2)
     {
-    Wektor2D w1;
-    w1.x = a.x + b.x;
-    w1.y = a.y + b.y;
-    return w1;
+        return Wektor2D(v1.getX()+v2.getX(), v1.getY()+v2.getY());
     }
- friend double operator*(Wektor2D a, Wektor2D b)
+ friend double operator*(Wektor2D v1, Wektor2D v2)
     {
-    double iloczyn;
-    iloczyn = a.x * b.x;
-    iloczyn += a.y * b.y;
-    return iloczyn;
+        return v1.getX()*v2.getX()+v1.getY()*v2.getY();
     }
  private:
-    double x;
-    double y;
+    double xCoord;
+    double yCoord;
 };
 int main()
 {

@@ -34,7 +34,7 @@ class Wektor2D
     double xCoord;
     double yCoord;
 };
-int main()
+/* int main()
 {
 Wektor2D v1{};           // Konstruktor domyślny, wektor o wsp. [0, 0]
 v1.setX(1.);             // setter
@@ -47,4 +47,4 @@ Wektor2D v2{2., 2.}; // Konstruktor nadający współrzędne
 Wektor2D sum = v1 + v2; // dodawanie wektorów
 
 double prod = v1 * v2; // iloczyn skalarny
-}
+} */
